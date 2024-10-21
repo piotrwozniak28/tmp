@@ -1,42 +1,42 @@
-# | cidr block destination | tst | stg | prd | hosts count
---- | --- | --- | --- | --- | --- |
-1  |  n_0100_edge_project_ingress_subnet  |  10.0.0.0/24  |  10.64.0.0/24  | 10.128.0.0/24 | 256
-2  |  n_0110_edge_project_inbound_endpoint_subnet  |  10.0.1.0/24  |  10.64.1.0/24  | 10.128.1.0/24 | 256
-3  |  n_0120_edge_project_egress_proxy_only_subnet  |  10.0.2.0/23  |  10.64.2.0/23  | 10.128.2.0/23 | 512
-4  |  n_0130_edge_project_egress_subnet  |  10.0.4.0/24  |  10.64.4.0/24  | 10.128.4.0/24 | 256
-5  |  n_0140_edge_project_squid_service_attachment_subnet  |  10.0.5.0/24  |  10.64.5.0/24  | 10.128.5.0/24 | 256
-6  |  n_0200_cicd_project_github_runner_subnet  |  10.0.16.0/24  |  10.64.16.0/24  | 10.128.16.0/24 | 256
-7  |  n_0210_cicd_project_tooling_outbound_proxy_subnet  |  10.0.17.0/24  |  10.64.17.0/24  | 10.128.17.0/24 | 256
-8  |  n_0220_cicd_project_pod_address_space  |  100.64.0.0/20  |  100.72.0.0/20  | 100.80.0.0/20 | 4096
-9  |  n_0230_cicd_project_service_address_space  |  100.64.16.0/20  |  100.72.16.0/20  | 100.80.16.0/20 | 4096
-10  |  n_0300_api_sec_project_psa_address_space  |  10.0.32.0/24  |  10.64.32.0/24  | 10.128.32.0/24 | 256
-11  |  n_0310_api_sec_project_cloud_run_service_attachment_subnet  |  10.0.33.0/24  |  10.64.33.0/24  | 10.128.33.0/24 | 256
-12  |  n_0320_api_sec_project_proxy_only_subnet  |  10.0.34.0/23  |  10.64.34.0/23  | 10.128.34.0/23 | 512
-13  |  n_0330_api_sec_project_serverless_connector_subnet  |  10.0.36.0/28  |  10.64.36.0/28  | 10.128.36.0/28 | 16
-14  |  n_0340_api_sec_project_application_load_balancer_subnet  |  10.0.36.16/29  |  10.64.36.16/29  | 10.128.36.16/29 | 8
-15  |  n_0400_cluster_project_cluster_subnet  |  10.2.0.0/16  |  10.66.0.0/16  | 10.130.0.0/16 | 65536
-16  |  n_0410_cluster_project_proxy_only_subnet  |  10.3.0.0/23  |  10.67.0.0/23  | 10.131.0.0/23 | 512
-17  |  n_0420_cluster_project_cluster_service_attachment_subnet  |  10.3.2.0/24  |  10.67.2.0/24  | 10.131.2.0/24 | 256
-18  |  n_0430_cluster_project_outbound_squid_endpoint_subnet  |  10.3.3.0/24  |  10.67.3.0/24  | 10.131.3.0/24 | 256
-19  |  n_0440_cluster_project_outbound_cloud_run_endpoint_subnet  |  10.3.4.0/24  |  10.67.4.0/24  | 10.131.4.0/24 | 256
-20  |  n_0450_cluster_project_control_plane_address_space  |  10.3.5.0/28  |  10.67.5.0/28  | 10.131.5.0/28 | 16
-21  |  n_0460_cluster_project_tenant_endpoint_subnet_001  |  10.3.6.0/24  |  10.67.6.0/24  | 10.131.6.0/24 | 256
-22  |  n_0460_cluster_project_tenant_endpoint_subnet_002  |  10.3.7.0/24  |  10.67.7.0/24  | 10.131.7.0/24 | 256
-23  |  n_0460_cluster_project_tenant_endpoint_subnet_003  |  10.3.8.0/24  |  10.67.8.0/24  | 10.131.8.0/24 | 256
-24  |  n_0470_cluster_project_pod_address_space  |  100.65.0.0/16  |  100.73.0.0/16  | 100.81.0.0/16 | 65536
-25  |  n_0480_cluster_project_service_address_space  |  100.66.0.0/16  |  100.74.0.0/16  | 100.82.0.0/16 | 65536
-26  |  n_1100_tenant_project_001_psa_address_space  |  10.32.0.0/21  |  10.96.0.0/21  | 10.160.0.0/21 | 2048
-27  |  n_1110_tenant_project_001_proxy_only_subnet  |  10.32.8.0/24  |  10.96.8.0/24  | 10.160.8.0/24 | 256
-28  |  n_1120_tenant_project_001_egress_subnet  |  10.32.9.0/24  |  10.96.9.0/24  | 10.160.9.0/24 | 256
-29  |  n_1130_tenant_project_001_sql_service_attachment_subnet  |  10.32.10.0/24  |  10.96.10.0/24  | 10.160.10.0/24 | 256
-30  |  n_1140_tenant_project_001_memorystore_service_attachment_subnet  |  10.32.11.0/24  |  10.96.11.0/24  | 10.160.11.0/24 | 256
-31  |  n_1200_tenant_project_002_psa_address_space  |  10.32.16.0/21  |  10.96.16.0/21  | 10.160.16.0/21 | 2048
-32  |  n_1210_tenant_project_002_proxy_only_subnet  |  10.32.24.0/24  |  10.96.24.0/24  | 10.160.24.0/24 | 256
-33  |  n_1220_tenant_project_002_egress_subnet  |  10.32.25.0/24  |  10.96.25.0/24  | 10.160.25.0/24 | 256
-34  |  n_1230_tenant_project_002_sql_service_attachment_subnet  |  10.32.26.0/24  |  10.96.26.0/24  | 10.160.26.0/24 | 256
-35  |  n_1240_tenant_project_002_memorystore_service_attachment_subnet  |  10.32.27.0/24  |  10.96.27.0/24  | 10.160.27.0/24 | 256
-36  |  n_1300_tenant_project_003_psa_address_space  |  10.32.32.0/21  |  10.96.32.0/21  | 10.160.32.0/21 | 2048
-37  |  n_1310_tenant_project_003_proxy_only_subnet  |  10.32.40.0/24  |  10.96.40.0/24  | 10.160.40.0/24 | 256
-38  |  n_1320_tenant_project_003_egress_subnet  |  10.32.41.0/24  |  10.96.41.0/24  | 10.160.41.0/24 | 256
-39  |  n_1330_tenant_project_003_sql_service_attachment_subnet  |  10.32.42.0/24  |  10.96.42.0/24  | 10.160.42.0/24 | 256
-40  |  n_1340_tenant_project_003_memorystore_service_attachment_subnet  |  10.32.43.0/24  |  10.96.43.0/24  | 10.160.43.0/24 | 256
+|#    |cidr block destination                                           |tst                 |stg                 |prd                |hosts count  |subnet_name                                   |
+|---  |---                                                              |---                 |---                 |---                |---          |---                                           |
+|1    |n_0100_edge_project_ingress_subnet                               |10.0.0.0/24         |10.64.0.0/24        |10.128.0.0/24      |256          |sb-{env}-edge-euw2-ingress                    |
+|2    |n_0110_edge_project_inbound_endpoint_subnet                      |10.0.1.0/24         |10.64.1.0/24        |10.128.1.0/24      |256          |sb-{env}-edge-euw2-ingress-psc-ep             |
+|3    |n_0120_edge_project_egress_proxy_only_subnet                     |10.0.2.0/23         |10.64.2.0/23        |10.128.2.0/23      |512          |sb-{env}-edge-euw2-egress-lib-proxy-only      |
+|4    |n_0130_edge_project_egress_subnet                                |10.0.4.0/24         |10.64.4.0/24        |10.128.4.0/24      |256          |sb-{env}-edge-euw2-egress                     |
+|5    |n_0140_edge_project_squid_service_attachment_subnet              |10.0.5.0/24         |10.64.5.0/24        |10.128.5.0/24      |256          |sb-{env}-edge-euw2-egress-squid-psc-a         |
+|6    |n_0200_cicd_project_github_runner_subnet                         |10.0.16.0/24        |10.64.16.0/24       |10.128.16.0/24     |256          |sb-{env}-tool-euw2-egress-gh-runners          |
+|7    |n_0210_cicd_project_tooling_outbound_proxy_subnet                |10.0.17.0/24        |10.64.17.0/24       |10.128.17.0/24     |256          |sb-{env}-tool-euw2-egress                     |
+|8    |n_0220_cicd_project_pod_address_space                            |100.64.0.0/20       |100.72.0.0/20       |100.80.0.0/20      |4096         |undefined                                     |
+|9    |n_0230_cicd_project_service_address_space                        |100.64.16.0/20      |100.72.16.0/20      |100.80.16.0/20     |4096         |undefined                                     |
+|10   |n_0300_api_sec_project_psa_address_space                         |10.0.32.0/24        |10.64.32.0/24       |10.128.32.0/24     |256          |sb-{env}-api-sec-euw2-psa                     |
+|11   |n_0310_api_sec_project_cloud_run_service_attachment_subnet       |10.0.33.0/24        |10.64.33.0/24       |10.128.33.0/24     |256          |sb-{env}-api-sec-euw2-cloud-run-psc-a         |
+|12   |n_0320_api_sec_project_proxy_only_subnet                         |10.0.34.0/23        |10.64.34.0/23       |10.128.34.0/23     |512          |sb-{env}-api-sec-euw2-ilb-proxy-only          |
+|13   |n_0330_api_sec_project_serverless_connector_subnet               |10.0.36.0/28        |10.64.36.0/28       |10.128.36.0/28     |16           |sb-{env}-api-sec-euw2-serverless-connector    |
+|14   |n_0340_api_sec_project_application_load_balancer_subnet          |10.0.36.16/29       |10.64.36.16/29      |10.128.36.16/29    |8            |sb-{env}-api-sec-euw2-ilb                     |
+|15   |n_0400_cluster_project_cluster_subnet                            |10.2.0.0/16         |10.66.0.0/16        |10.130.0.0/16      |65536        |sb-{env}-gkemt-euw2-cluster                   |
+|16   |n_0410_cluster_project_proxy_only_subnet                         |10.3.0.0/23         |10.67.0.0/23        |10.131.0.0/23      |512          |sb-{env}-gkemt-euw2-cluster-proxy-only        |
+|17   |n_0420_cluster_project_cluster_service_attachment_subnet         |10.3.2.0/24         |10.67.2.0/24        |10.131.2.0/24      |256          |sb-{env}-gkemt-euw2-cluster-psc-a             |
+|18   |n_0430_cluster_project_outbound_squid_endpoint_subnet            |10.3.3.0/24         |10.67.3.0/24        |10.131.3.0/24      |256          |sb-{env}-gkemt-euw2-cluster-squid-psc-ep      |
+|19   |n_0440_cluster_project_outbound_cloud_run_endpoint_subnet        |10.3.4.0/24         |10.67.4.0/24        |10.131.4.0/24      |256          |sb-{env}-gkemt-euw2-cluster-cloud-run-psc-ep  |
+|20   |n_0450_cluster_project_control_plane_address_space               |10.3.5.0/28         |10.67.5.0/28        |10.131.5.0/28      |16           |sb-{env}-gkemt-euw2-cluster-control-plane     |
+|21   |n_0460_cluster_project_tenant_endpoint_subnet_001                |10.3.6.0/24         |10.67.6.0/24        |10.131.6.0/24      |256          |sb-{env}-gkemt-euw2-tenant-001-psc-ep         |
+|22   |n_0460_cluster_project_tenant_endpoint_subnet_002                |10.3.7.0/24         |10.67.7.0/24        |10.131.7.0/24      |256          |sb-{env}-gkemt-euw2-tenant-002-psc-ep         |
+|23   |n_0460_cluster_project_tenant_endpoint_subnet_003                |10.3.8.0/24         |10.67.8.0/24        |10.131.8.0/24      |256          |sb-{env}-gkemt-euw2-tenant-003-psc-ep         |
+|24   |n_0470_cluster_project_pod_address_space                         |100.65.0.0/16       |100.73.0.0/16       |100.81.0.0/16      |65536        |sb-{env}-gkemt-euw2-pod-address-space         |
+|25   |n_0480_cluster_project_service_address_space                     |100.66.0.0/16       |100.74.0.0/16       |100.82.0.0/16      |65536        |sb-{env}-gkemt-euw2-service-address-space     |
+|26   |n_1100_tenant_project_001_psa_address_space                      |10.32.0.0/21        |10.96.0.0/21        |10.160.0.0/21      |2048         |undefined                                     |
+|27   |n_1110_tenant_project_001_proxy_only_subnet                      |10.32.8.0/24        |10.96.8.0/24        |10.160.8.0/24      |256          |undefined                                     |
+|28   |n_1120_tenant_project_001_egress_subnet                          |10.32.9.0/24        |10.96.9.0/24        |10.160.9.0/24      |256          |undefined                                     |
+|29   |n_1130_tenant_project_001_sql_service_attachment_subnet          |10.32.10.0/24       |10.96.10.0/24       |10.160.10.0/24     |256          |undefined                                     |
+|30   |n_1140_tenant_project_001_memorystore_service_attachment_subnet  |10.32.11.0/24       |10.96.11.0/24       |10.160.11.0/24     |256          |undefined                                     |
+|31   |n_1200_tenant_project_002_psa_address_space                      |10.32.16.0/21       |10.96.16.0/21       |10.160.16.0/21     |2048         |undefined                                     |
+|32   |n_1210_tenant_project_002_proxy_only_subnet                      |10.32.24.0/24       |10.96.24.0/24       |10.160.24.0/24     |256          |undefined                                     |
+|33   |n_1220_tenant_project_002_egress_subnet                          |10.32.25.0/24       |10.96.25.0/24       |10.160.25.0/24     |256          |undefined                                     |
+|34   |n_1230_tenant_project_002_sql_service_attachment_subnet          |10.32.26.0/24       |10.96.26.0/24       |10.160.26.0/24     |256          |undefined                                     |
+|35   |n_1240_tenant_project_002_memorystore_service_attachment_subnet  |10.32.27.0/24       |10.96.27.0/24       |10.160.27.0/24     |256          |undefined                                     |
+|36   |n_1300_tenant_project_003_psa_address_space                      |10.32.32.0/21       |10.96.32.0/21       |10.160.32.0/21     |2048         |undefined                                     |
+|37   |n_1310_tenant_project_003_proxy_only_subnet                      |10.32.40.0/24       |10.96.40.0/24       |10.160.40.0/24     |256          |undefined                                     |
+|38   |n_1320_tenant_project_003_egress_subnet                          |10.32.41.0/24       |10.96.41.0/24       |10.160.41.0/24     |256          |undefined                                     |
+|39   |n_1330_tenant_project_003_sql_service_attachment_subnet          |10.32.42.0/24       |10.96.42.0/24       |10.160.42.0/24     |256          |undefined                                     |
+|40   |n_1340_tenant_project_003_memorystore_service_attachment_subnet  |10.32.43.0/24       |10.96.43.0/24       |10.160.43.0/24     |256          |undefined                                     |
