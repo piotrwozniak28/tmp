@@ -5,10 +5,10 @@
 |3    |n_0120_edge_project_egress_proxy_only_subnet                     |10.0.2.0/23         |10.64.2.0/23        |10.128.2.0/23      |512          |sb-{env}-edge-euw2-egress-lib-proxy-only      |
 |4    |n_0130_edge_project_egress_subnet                                |10.0.4.0/24         |10.64.4.0/24        |10.128.4.0/24      |256          |sb-{env}-edge-euw2-egress                     |
 |5    |n_0140_edge_project_squid_service_attachment_subnet              |10.0.5.0/24         |10.64.5.0/24        |10.128.5.0/24      |256          |sb-{env}-edge-euw2-egress-squid-psc-a         |
-|6    |n_0200_cicd_project_github_runner_subnet                         |10.0.16.0/24        |10.64.16.0/24       |10.128.16.0/24     |256          |sb-{env}-tool-euw2-egress-gh-runners          |
-|7    |n_0210_cicd_project_tooling_outbound_proxy_subnet                |10.0.17.0/24        |10.64.17.0/24       |10.128.17.0/24     |256          |sb-{env}-tool-euw2-egress                     |
-|8    |n_0220_cicd_project_pod_address_space                            |100.64.0.0/20       |100.72.0.0/20       |100.80.0.0/20      |4096         |undefined                                     |
-|9    |n_0230_cicd_project_service_address_space                        |100.64.16.0/20      |100.72.16.0/20      |100.80.16.0/20     |4096         |undefined                                     |
+|6    |n_0200_tooling_project_github_runner_subnet                      |10.0.16.0/24        |10.64.16.0/24       |10.128.16.0/24     |256          |sb-{env}-tool-euw2-egress-gh-runners          |
+|7    |n_0210_tooling_project_egress_subnet                             |10.0.17.0/24        |10.64.17.0/24       |10.128.17.0/24     |256          |undefined                                     |
+|8    |n_0220_tooling_project_pod_address_space                         |100.64.0.0/20       |100.72.0.0/20       |100.80.0.0/20      |4096         |undefined                                     |
+|9    |n_0230_tooling_project_service_address_space                     |100.64.16.0/20      |100.72.16.0/20      |100.80.16.0/20     |4096         |undefined                                     |
 |10   |n_0300_api_sec_project_psa_address_space                         |10.0.32.0/24        |10.64.32.0/24       |10.128.32.0/24     |256          |sb-{env}-api-sec-euw2-psa                     |
 |11   |n_0310_api_sec_project_cloud_run_service_attachment_subnet       |10.0.33.0/24        |10.64.33.0/24       |10.128.33.0/24     |256          |sb-{env}-api-sec-euw2-cloud-run-psc-a         |
 |12   |n_0320_api_sec_project_proxy_only_subnet                         |10.0.34.0/23        |10.64.34.0/23       |10.128.34.0/23     |512          |sb-{env}-api-sec-euw2-ilb-proxy-only          |
